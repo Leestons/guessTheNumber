@@ -1,9 +1,10 @@
 import random, sys
 parsed = False
+difficulty = int(input('What number would you like to go up to? '))
 
 def game():
-	secretNumber = random.randint(1, 20)
-	print('I am thinking of a number between 1 and 20')
+	secretNumber = random.randint(1, difficulty)
+	print('I am thinking of a number between 1 and ' + str(difficulty))
 	while parsed == False:
 		try:
 			for guessesTaken in range(1,7):
@@ -15,7 +16,7 @@ def game():
 				else:
 					break
 			if guess == secretNumber:
-				print('You guessed my number in ' + str(guessesTaken) + ' guesses!')
+				print('Good job! You guessed my number in ' + str(guessesTaken) + ' guesses!')
 			else:
 				print('The number I was thinking of was ' +str(secretNumber))
 			replay = input('Press Y to play again, press any other key to quit: ')
