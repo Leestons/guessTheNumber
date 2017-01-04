@@ -23,7 +23,7 @@ def game():
 				print('Good job! You guessed my number in ' + str(guessesTaken) + ' guesses!')
 			else:
 				print('Nope. The number I was thinking of was ' + str(secretNumber))
-			print('Press Y to play again, press any other key to exit')
+			print('Enter Y to play again, press any other key to exit')
 			response = input()
 			if response == 'y':
 				game()
